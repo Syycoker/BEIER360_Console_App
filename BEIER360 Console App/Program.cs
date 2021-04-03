@@ -6,10 +6,10 @@ namespace BEIER360_Console_App
     {
         static void Main(string[] args)
         {
-            IFeelGreat classObject = new IFeelGreat(100,65,35);
-            User user = classObject.GetUser();
+            IFeelGreat classObject = new IFeelGreat(100,65,35);//and instance of 100 total users, 65 males and 35 females
+            User user = classObject.GetUser();//get a user with a random id number(50) and a random gender (Male/Female)
 
-            double PercentageOfFemales = (classObject.GetFemaleUsers() / (double)classObject.GetTotalUsers()) * 100;
+            double PercentageOfFemales = (classObject.GetFemaleUsers() / (double)classObject.GetTotalUsers()) * 100;//working out percentage of females in total user population
             double PercentageOfMales = (classObject.GetMaleUsers() / (double)classObject.GetTotalUsers()) * 100;
 
             PercentageOfFemales = Math.Round(PercentageOfFemales, 2);
@@ -29,8 +29,6 @@ namespace BEIER360_Console_App
                 Console.WriteLine("The User is actually a " + user.GetGender());
             }
                 
-
-            
         }
     }
 }

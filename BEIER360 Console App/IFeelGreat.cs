@@ -6,17 +6,17 @@ namespace BEIER360_Console_App
 {
     class IFeelGreat
     {
-        private int NumberOfUsers;
+        private int NumberOfUsers; //private variable users cannot gain access to directly
         private int MaleUsers;
         private int FemaleUsers;
-        public IFeelGreat(int TotalUsers, int MaleUsers, int FemaleUsers)
+        public IFeelGreat(int TotalUsers, int MaleUsers, int FemaleUsers)//constructor for IFeelGreat class to set:
         {
-            this.NumberOfUsers = TotalUsers;
-            this.MaleUsers = MaleUsers;
-            this.FemaleUsers = FemaleUsers;
+            this.NumberOfUsers = TotalUsers; //-to set total user
+            this.MaleUsers = MaleUsers; //-male users
+            this.FemaleUsers = FemaleUsers;//and female users
         }
 
-        
+        //getters and setters for the total users, male and female users
         public void SetTotalUsers(int value)
         {
             this.NumberOfUsers = value;
@@ -41,6 +41,8 @@ namespace BEIER360_Console_App
         {
             return this.MaleUsers;
         }
+
+        //@unused method
         public User[] GetUsers()
         {
             User[] Users = new User[NumberOfUsers];
@@ -62,7 +64,9 @@ namespace BEIER360_Console_App
             User user = new User(rand, GetUserGender());
             return user;
         }
-
+        /*method to assign gender based on modulus
+         * If random number is even then assign this user as female, else assign this user as a male
+         */
         public Gender GetUserGender()
         {
             int randomNumber;

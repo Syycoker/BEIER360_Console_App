@@ -18,10 +18,10 @@ namespace BEIER360_Console_App
             Console.WriteLine("Are you feeling great?");
             string response = Console.ReadLine();
 
-            if (response.Equals("Yes"))
+            if (response.Equals("Yes") || response.Equals("yes") || response.Equals("y"))
             {
                 Console.WriteLine("The User is a Female with 100% certainty");
-            } else if (response.Equals("No"))
+            } else if (response.Equals("No") || response.Equals("no") || response.Equals("n"))
             {
                 Console.WriteLine("\r\n" +"The User could be :" + "\r\n");
                 Console.WriteLine("Female - " + PercentageOfFemales + "% probability,");
